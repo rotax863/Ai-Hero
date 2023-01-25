@@ -3013,7 +3013,13 @@ bool CheckBlock(const CBlock& block, CValidationState& state, bool fCheckPOW, bo
     // because we receive the wrong transactions for it.
 
     // Size limits
-    if (block.vtx.empty() || block.vtx.size() > MAX_BLOCK_BASE_SIZE || ::GetSerializeSize(block, SER_NETWORK, PROTOCOL_VERSION) > MAX_BLOCK_BASE_SIZE)
+    unsigned int current_max_block_size = PRE_V3_MAX_BLOCK_BASE_SIZE;
+    const Consensus::Params& consensus = Params().GetConsensus();
+    if (chainActive.Height() > consensus.EnableNativeTokenHeight) {
+        //increase max blocksize from 8 MB to 16 MB
+        current_max_block_size = MAX_BLOCK_BASE_SIZE;
+    }
+    if (block.vtx.empty() || block.vtx.size() > current_max_block_size || ::GetSerializeSize(block, SER_NETWORK, PROTOCOL_VERSION) > current_max_block_size)
         return state.DoS(100, false, REJECT_INVALID, "bad-blk-length", false, "size limits failed");
 
     // First transaction must be coinbase, the rest must not be

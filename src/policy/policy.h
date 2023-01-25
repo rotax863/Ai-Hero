@@ -23,19 +23,19 @@ class CCoinsViewCache;
 static const CAmount RECOMMENDED_MIN_TX_FEE = 25 * COIN;
 
 /** Default for -blockmaxsize, which controls the maximum size of block the mining code will create **/
-static const unsigned int DEFAULT_BLOCK_MAX_SIZE = 1500 * 1000; // 1.5mb
+static const unsigned int DEFAULT_BLOCK_MAX_SIZE = 8 * 1000000;
 /** Default for -blockprioritysize, maximum space for zero/low-fee transactions **/
 static const unsigned int DEFAULT_BLOCK_PRIORITY_SIZE = 0;
 /** Default for -blockmintxfee, which sets the minimum feerate for a transaction in blocks created by mining code **/
 static const unsigned int DEFAULT_BLOCK_MIN_TX_FEE = 25 * 10000;
 /** The maximum size for transactions we're willing to relay/mine */
-static const unsigned int MAX_STANDARD_TX_SIZE = 1250 * 1000; // 1.25mb
+static const unsigned int MAX_STANDARD_TX_SIZE = 8 * 1000000;
 /** The minimum size for transactions we're willing to relay/mine */
 static const unsigned int MIN_STANDARD_TX_SIZE = 65;
 /** The maximum number of sigops we're willing to relay/mine in a single tx */
-static const unsigned int MAX_STANDARD_TX_SIGOPS_COUNT = MAX_TX_SIGOPS_COUNT/5;
+static const unsigned int MAX_STANDARD_TX_SIGOPS_COUNT = MAX_TX_SIGOPS_COUNT;
 /** Default for -maxmempool, maximum megabytes of mempool memory usage */
-static const unsigned int DEFAULT_MAX_MEMPOOL_SIZE = 1000;
+static const unsigned int DEFAULT_MAX_MEMPOOL_SIZE = 2048;
 /** Default for -incrementalrelayfee, which sets the minimum feerate increase
  *  for mempool limiting or BIP 125 replacement
  *
