@@ -106,8 +106,7 @@ public:
         consensus.SteadyASERTHeight = 130000;
         consensus.DisableRichTxIDHeight = 130000;
 
-        // Hard fork at height 290000 to enable native token support and increase max blocksize to 16 MB
-        consensus.EnableNativeTokenHeight = 290000;
+        consensus.EnableNativeTokenHeight = 1;
 
         // The best chain should have at least this much work.
         consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000000000d9e4a0215757");
@@ -139,8 +138,15 @@ public:
         assert(genesis.hashMerkleRoot == uint256S("cbdb156beade97595e5d6ff8b0ee609033030bec41851576e30c4f5a68e2cbeb"));
 
         // Note that of those with the service bits flag, most only support a subset of possible options
-        vSeeds.push_back(CDNSSeedData("novobitcoin.org", "seed.novobitcoin.org", true));
-        vSeeds.push_back(CDNSSeedData("novoscan.org", "seed.novoscan.org", true));
+        // TODO: Need better seed nodes
+        vSeeds.push_back(CDNSSeedData("38.242.236.253", "38.242.236.253", true));
+        vSeeds.push_back(CDNSSeedData("27.254.39.22", "27.254.39.22", true));
+        vSeeds.push_back(CDNSSeedData("15.204.182.53", "15.204.182.53", true));
+        vSeeds.push_back(CDNSSeedData("54.37.136.64", "54.37.136.64", true));
+        vSeeds.push_back(CDNSSeedData("62.141.39.38", "62.141.39.38", true));
+        vSeeds.push_back(CDNSSeedData("51.161.116.66", "51.161.116.66", true));
+        vSeeds.push_back(CDNSSeedData("161.97.155.137", "161.97.155.137", true));
+        vSeeds.push_back(CDNSSeedData("24.98.164.114", "24.98.164.114", true));
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 5);
@@ -174,13 +180,15 @@ public:
                 {210000, uint256S("0000000000000bda2e5d5dbbd1b64b5e9a3b2467e0d1430a760c5acf2c341835")},
                 {230000, uint256S("0000000000006204e0e277462a57d1e2b1e04bf3e35fac9c31f53c7ed679125d")},
                 {250000, uint256S("00000000000097920654b26f11cc0b88a98072ec8c3a10f3661000e041bce382")},
+                {270000, uint256S("00000000000020e6eaf667e3ae44b7a07b9ffd5d5ad213bfa6be3c073bbd1f62")},
+                {290005, uint256S("00000000000057a5d34793fddfa1617b7e05f0a27926fe8172860276144081b1")},
             }};
 
 
         chainTxData = ChainTxData{
             // Data as of block 00000000000097920654b26f11cc0b88a98072ec8c3a10f3661000e041bce382 (height 250000).
-            1673066570, // * UNIX timestamp of last checkpoint block
-            396113,   // * total number of transactions between genesis and last checkpoint
+            1679108107, // * UNIX timestamp of last checkpoint block
+            458368,   // * total number of transactions between genesis and last checkpoint
                      //   (the tx=... number in the SetBestChain debug.log lines)
             3      // * estimated number of transactions per second after checkpoint
         };

@@ -19,7 +19,7 @@ To run Novo on Linux:
 
 ### Need Help?
 
-* Log an issue on [GitHub] (https://github.com/novoworks/novo/issues)
+* Log an issue on [GitHub] (https://github.com/novochain/novo/issues)
 * Ask for help on the [Novo Forum](https://novoforum.net/).
 * Consult [Novo Wiki](https://wiki.novonode.org/) for information about Novo protocol.
 

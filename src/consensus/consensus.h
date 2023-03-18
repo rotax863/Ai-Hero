@@ -10,8 +10,6 @@
 
 /** The maximum allowed size for a block, in bytes (network rule) */
 static const unsigned int MAX_BLOCK_BASE_SIZE = 16 * 1000000;
-/** The maximum allowed size for a block, in bytes, prior to 0.3.0 (network rule) */
-static const unsigned int PRE_V3_MAX_BLOCK_BASE_SIZE = 8 * 1000000;
 /** The maximum allowed number of signature check operations in a block (network rule) */
 static const int64_t MAX_BLOCK_SIGOPS_COUNT = 16 * 75000;
 
