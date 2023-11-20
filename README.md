@@ -1,20 +1,21 @@
-Novo
+Ai-Hero
 =================
 
-The goal of Novo is to create programmable money that is usable by everyone in the world.
-We believe this is a civilization-changing technology that will dramatically increase human flourishing, freedom, and prosperity.
-The project aims to achieve this goal by implementing a series of optimizations and protocol upgrades to enable programmable money to scale many orders of magnitude beyond current limits.
+The goal of Ai-Hero is to create programmable money that is usable by everyone in the world.
+The project has a max supply of 8.4 billion. We aim to provide GPU miners stable income.
+Block reward is 1 million, with a halving yearly.
 
-What is Novo?
+
+What is Ai-Hero?
 ---------------------
 
-Novo is a digital currency that enables instant payments to anyone globally.
+Ai-hero is a digital currency.
 It uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network.
 
 License
 -------
 
-Novo is released under the terms of the MIT license. See
+Ai-Hero is released under the terms of the MIT license. See
 [COPYING](COPYING) for more information or see
 [https://opensource.org/licenses/MIT](https://opensource.org/licenses/MIT).
 
