@@ -9,7 +9,7 @@ Block reward is 1 million, with a halving yearly.
 What is Ai-Hero?
 ---------------------
 
-Ai-hero is a digital currency, forked from the Novo Chain
+Ai-hero is a digital currency, forked from the Novo Chain.
 Ai-hero is a Low pow algorithm with high rewards
 It uses peer-to-peer technology to operate with no central authority: managing transactions and issuing money are carried out collectively by the network.
 
